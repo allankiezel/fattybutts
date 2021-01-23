@@ -31,7 +31,7 @@ module.exports = {
       resolve: "gatsby-source-wordpress",
       options: {
         // I have created a dummy site for us to use with the plugins we discussed
-        baseUrl: "fattybuttsbbq.com",
+        baseUrl: "editor.fattybuttsbbq.com",
         protocol: "https",
         hostingWPCOM: false,
         // We will be using some advanced custom fields
@@ -53,6 +53,8 @@ module.exports = {
           "**/tags",
           "**/taxonomies",
           "**/users",
+          "**/menus", // <== Menu api endpoint
+          "**/menu-locations", // <== Menu api endpoint
         ],
         excludedRoutes: [],
         normalizer: function ({ entities }) {
